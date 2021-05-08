@@ -2,15 +2,13 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 
-public class FacebookRegistration {
+public class FaceRG {
 
     @Test
     public void test() {
@@ -26,7 +24,7 @@ public class FacebookRegistration {
         $(byName("reg_email__")).setValue("995577467307");
         $("#password_step_input").setValue("Tako44Tako");
         $(byName("birthday_month")).selectOption("Jun");
-        $("#day").selectOption(2);
+        $("#day").selectOption("2");
         $(byName("birthday_year")).selectOption("1993");
         $("._58mt", 2).click();
         $("._7-16").shouldBe(Condition.visible);
@@ -41,6 +39,3 @@ public class FacebookRegistration {
 
     }
 }
-
-
-
